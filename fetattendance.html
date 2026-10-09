@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Management</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #173b70;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #24559a;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px #ccd3dc;
+        }
+
+        h2 {
+            color: #173b70;
+        }
+
+        input, select, button {
+            padding: 10px;
+            margin: 7px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        button {
+            background: #24559a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 12px 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #24559a;
+            color: white;
+        }
+
+        .present {
+            color: green;
+            font-weight: bold;
+        }
+
+        .absent {
+            color: red;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #173b70;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Student Attendance Management</h1>
+    <p>Manage Student Attendance Easily</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#add">Add Student</a>
+    <a href="#attendance">Attendance</a>
+    <a href="#report">Reports</a>
+</nav>
+
+<div class="container">
+
+    <section class="card" id="home">
+        <h2>Welcome</h2>
+        <p>Welcome to the Student Attendance Management System.</p>
+        <p>This website helps organize student details and attendance records.</p>
+    </section>
+
+    <section class="card" id="add">
+        <h2>Add Student Details</h2>
+
+        <form action="#" method="get">
+            <label>Roll Number</label><br>
+            <input type="text" placeholder="Enter roll number" required>
+            <br>
+
+            <label>Student Name</label><br>
+            <input type="text" placeholder="Enter student name" required>
+            <br>
+
+            <label>Department</label><br>
+            <select required>
+                <option value="">Select Department</option>
+                <option>Computer Science</option>
+                <option>Information Technology</option>
+                <option>Electronics</option>
+                <option>Mechanical</option>
+                <option>Agriculture</option>
+            </select>
+            <br>
+
+            <button type="submit">Add Student</button>
+        </form>
+
+        <p><small>Demo form only; student details are not saved.</small></p>
+    </section>
+
+    <section class="card" id="attendance">
+        <h2>Mark Attendance</h2>
+
+        <form action="#" method="get">
+            <label>Select Date</label><br>
+            <input type="date" required>
+            <br><br>
+
+            <table>
+                <tr>
+                    <th>Roll No.</th>
+                    <th>Student Name</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>101</td>
+                    <td>Arun Kumar</td>
+                    <td>
+                        <select>
+                            <option>Present</option>
+                            <option>Absent</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>102</td>
+                    <td>Priya</td>
+                    <td>
+                        <select>
+                            <option>Present</option>
+                            <option>Absent</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>103</td>
+                    <td>Rahul</td>
+                    <td>
+                        <select>
+                            <option>Present</option>
+                            <option>Absent</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+            <button type="submit">Submit Attendance</button>
+        </form>
+
+        <p><small>Demo only; attendance selections are not saved.</small></p>
+    </section>
+
+    <section class="card" id="report">
+        <h2>Attendance Report</h2>
+
+        <table>
+            <tr>
+                <th>Roll No.</th>
+                <th>Name</th>
+                <th>Total Classes</th>
+                <th>Present</th>
+                <th>Attendance %</th>
+            </tr>
+
+            <tr>
+                <td>101</td>
+                <td>Arun Kumar</td>
+                <td>20</td>
+                <td class="present">18</td>
+                <td>90%</td>
+            </tr>
+
+            <tr>
+                <td>102</td>
+                <td>Priya</td>
+                <td>20</td>
+                <td class="present">19</td>
+                <td>95%</td>
+            </tr>
+
+            <tr>
+                <td>103</td>
+                <td>Rahul</td>
+                <td>20</td>
+                <td class="absent">12</td>
+                <td>60%</td>
+            </tr>
+        </table>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Student Attendance Management System</p>
+</footer>
+
+</body>
+</html>
